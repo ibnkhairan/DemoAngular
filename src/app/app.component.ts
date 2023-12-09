@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   actions : Array<any>=[
     {title:"Home","route":"/home",icon:"house"},
-    {title:"Products","route":"/products",icon:"house"},
-    {title:"New Product","route":"/newProduct",icon:"house"}
-  ]
+    {title:"Products","route":"/products",icon:"search"},
+    {title:"New Product","route":"/newProduct",icon:"safe"}
+  ];
+  currentAction:any;
+  setCurrentAction(action:any){
+    this.currentAction = action;
+  }
 }

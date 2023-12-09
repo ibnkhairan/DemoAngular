@@ -1,0 +1,13 @@
+{
+  "products": [
+    {
+      "id": 1, "name": "Compteur", "price": 5600, "checked": true
+    },
+    {
+      "id": 2, "name": "Printer", "price": 3200, "checked": false
+    },
+    {
+      "id": 3, "name": "SmartPhone", "price": 600, "checked": true
+    }
+  ]
+}
