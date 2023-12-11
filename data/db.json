@@ -23,6 +23,18 @@
       "name": "SmartPhone2",
       "price": 600,
       "checked": false
+    },
+    {
+      "name": "clavier",
+      "price": "30",
+      "checked": true,
+      "id": 5
+    },
+    {
+      "name": "ecran HP",
+      "price": "1000",
+      "checked": false,
+      "id": 6
     }
   ]
 }

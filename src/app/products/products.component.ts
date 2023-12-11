@@ -10,11 +10,14 @@ import {Observable} from "rxjs";
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit{
+  //products$! : Observable<Array<Product>>;
+  public products : Array<Product>=[];
+  public keyword : string="";
+
   constructor(private productService : ProductService) {
   }
 
-  //products$! : Observable<Array<Product>>;
-  products : Array<Product>=[];
+
 
 
   ngOnInit(): void {
@@ -55,5 +58,13 @@ export class ProductsComponent implements OnInit{
       }
     });
 
+  }
+
+  searchProducts() {
+    this.productService.searchProductService(this.keyword).subscribe({
+      next : data => {
+        this.products = data;
+      }
+    })
   }
 }

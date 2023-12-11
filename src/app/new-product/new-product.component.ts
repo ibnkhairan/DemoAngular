@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {ProductService} from "../services/product.service";
+import {Product} from "../model/product.model";
 
 @Component({
   selector: 'app-new-product',
@@ -9,14 +11,25 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 export class NewProductComponent implements OnInit{
   public productForm! : FormGroup;
 
-  constructor(private formBuilder : FormBuilder) {
+  constructor(private formBuilder : FormBuilder,private prodcutService : ProductService) {
   }
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
-      name : this.formBuilder.control(''),
-      price : this.formBuilder.control(''),
+      name : this.formBuilder.control('',[Validators.required]),
+      price : this.formBuilder.control(0,[Validators.required]),
       checked : this.formBuilder.control(false)
     });
+  }
+
+  saveProduct() {
+      let product : Product= this.productForm.value;
+      this.prodcutService.saveProductService(product).subscribe({
+        next : data => {
+          alert(JSON.stringify(data));
+        },error : err => {
+          console.log(err);
+        }
+      });
   }
 }
