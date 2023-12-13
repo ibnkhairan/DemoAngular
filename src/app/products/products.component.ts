@@ -24,12 +24,12 @@ export class ProductsComponent implements OnInit{
 
 
   ngOnInit(): void {
-      this.getProducts();
+      this.searchProducts();
   }
 
-  getProducts(){
+  searchProducts(){
 
-    this.productService.getProducts(this.keyword,this.currentPage,this.pageSize)
+    this.productService.searchProducts(this.keyword,this.currentPage,this.pageSize)
       .subscribe({
         next : (resp) => {
           this.products = resp.body as Product[];
@@ -73,6 +73,6 @@ export class ProductsComponent implements OnInit{
 
   handleGoToPage(page:number) {
     this.currentPage=page;
-    this.getProducts();
+    this.searchProducts();
   }
 }
