@@ -35,6 +35,12 @@
       "price": "1000",
       "checked": false,
       "id": 6
+    },
+    {
+      "name": "Mouse",
+      "price": "70",
+      "checked": true,
+      "id": 7
     }
   ]
 }

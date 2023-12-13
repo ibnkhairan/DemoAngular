@@ -13,6 +13,9 @@ export class ProductsComponent implements OnInit{
   //products$! : Observable<Array<Product>>;
   public products : Array<Product>=[];
   public keyword : string="";
+  public totalPages:number=0;
+  public pageSize:number=3;
+  public currentPage:number=1;
 
   constructor(private productService : ProductService) {
   }
@@ -26,10 +29,16 @@ export class ProductsComponent implements OnInit{
 
   getProducts(){
 
-    this.productService.getProducts()
+    this.productService.getProducts(this.keyword,this.currentPage,this.pageSize)
       .subscribe({
-        next : data => {
-          this.products=data
+        next : (resp) => {
+          this.products = resp.body as Product[];
+          let totalProducts:number = parseInt(resp.headers.get('x-total-count')!);
+          this.totalPages = Math.floor(totalProducts/this.pageSize);
+          if(totalProducts % this.pageSize != 0){
+            this.totalPages = this.totalPages + 1;
+          }
+          console.log(this.totalPages);
         },
         error : err => {
           console.log(err);
@@ -60,11 +69,10 @@ export class ProductsComponent implements OnInit{
 
   }
 
-  searchProducts() {
-    this.productService.searchProductService(this.keyword).subscribe({
-      next : data => {
-        this.products = data;
-      }
-    })
+
+
+  handleGoToPage(page:number) {
+    this.currentPage=page;
+    this.getProducts();
   }
 }
