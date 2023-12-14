@@ -29,4 +29,11 @@ export class ProductService {
       product);
   }
 
+  getProductById(productId: number) : Observable<Product>{
+    return this.http.get<Product>(`http://localhost:8089/products/${productId}`);
+  }
+
+  updateProduct(product: Product) :Observable<Product>{
+    return this.http.put<Product>(`http://localhost:8089/products/${product.id}`,product);
+  }
 }

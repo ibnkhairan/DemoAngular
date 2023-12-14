@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Compteur",
+      "name": "Compteur2",
       "price": 5600,
       "checked": true
     },
