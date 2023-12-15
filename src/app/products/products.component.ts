@@ -30,6 +30,7 @@ export class ProductsComponent implements OnInit{
         next : (resp) => {
           this.appState.productState.products = resp.body as Product[];
           let totalProducts:number = parseInt(resp.headers.get('x-total-count')!);
+          this.appState.productState.totalProducts=totalProducts;
           this.appState.productState.totalPages = Math.floor(totalProducts/this.appState.productState.pageSize);
           if(totalProducts % this.appState.productState.pageSize != 0){
             this.appState.productState.totalPages = this.appState.productState.totalPages + 1;
@@ -59,7 +60,9 @@ export class ProductsComponent implements OnInit{
     this.productService.deleteProducts(product).subscribe({
       next:value => {
         //this.getProducts()
-        this.appState.productState.products = this.appState.productState.products.filter((p :any)=> p.id != product.id);
+        //this.appState.productState.products =
+         // this.appState.productState.products.filter((p :any)=> p.id != product.id);
+        this.searchProducts();
       }
     });
 
