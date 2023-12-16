@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AppStateService} from "../services/app-state.service";
+import {LoadingService} from "../services/loading.service";
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import {AppStateService} from "../services/app-state.service";
 })
 export class NavbarComponent {
 
-  constructor(public appState : AppStateService) {
+  constructor(public appState : AppStateService,public loadingService : LoadingService) {
   }
 
   actions : Array<any>=[
