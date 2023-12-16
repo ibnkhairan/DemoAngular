@@ -24,9 +24,9 @@ export class ProductsComponent implements OnInit{
   }
 
   searchProducts(){
-    this.appState.setProductState({
+    /*this.appState.setProductState({
       status : "LOADING"
-    });
+    });*/
 
     this.productService.searchProducts(this.appState.productState.keyword,this.appState.productState.currentPage,this.appState.productState.pageSize)
       .subscribe({
