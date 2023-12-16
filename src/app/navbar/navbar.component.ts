@@ -8,8 +8,13 @@ import {LoadingService} from "../services/loading.service";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  public isLoading : boolean=false;
   constructor(public appState : AppStateService,public loadingService : LoadingService) {
+    this.loadingService.isLoading$.subscribe({
+      next : (value)=>{
+        this.isLoading = value;
+      }
+    })
   }
 
   actions : Array<any>=[
