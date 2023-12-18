@@ -8,19 +8,19 @@ import {LoadingService} from "../services/loading.service";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  public isLoading : boolean=false;
+//  public isLoading : boolean=false;
   constructor(public appState : AppStateService,public loadingService : LoadingService) {
-    this.loadingService.isLoading$.subscribe({
+  /*  this.loadingService.isLoading$.subscribe({
       next : (value)=>{
         this.isLoading = value;
       }
-    })
+    })*/
   }
 
   actions : Array<any>=[
-    {title:"Home","route":"/home",icon:"house"},
-    {title:"Products","route":"/products",icon:"search"},
-    {title:"New Product","route":"/newProduct",icon:"safe"}
+    {title:"Home","route":"/admin/home",icon:"house"},
+    {title:"Products","route":"/admin/products",icon:"search"},
+    {title:"New Product","route":"/admin/newProduct",icon:"safe"}
   ];
   currentAction:any;
   setCurrentAction(action:any){
