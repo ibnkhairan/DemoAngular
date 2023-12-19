@@ -1,4 +1,4 @@
-<nav class="p-3">
+<nav class="p-3 navbar" >
   <ul class="nav nav-pills">
     <li *ngFor="let action of actions">
       <button
@@ -15,6 +15,19 @@
       <div class="spinner-border text-primary ms-2" role="status">
 
       </div>
+    </li>
+  </ul>
+  <ul class="nav nav-pills">
+    <li *ngIf="appState.authState.isAuthenticated">
+      <span class="p-1 m-1" >{{appState.authState.username}}</span>
+      <button class="btn  btn-outline-success" (click)="logout()">
+        <i class="bi bi-door-closed-fill"></i>
+      </button>
+    </li>
+    <li *ngIf="!appState.authState.isAuthenticated">
+      <button class="btn  btn-outline-success" (click)="login()">
+        <i class="bi bi-door-open-fill"></i>
+      </button>
     </li>
   </ul>
 </nav>
