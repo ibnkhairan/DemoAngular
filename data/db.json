@@ -1,22 +1,29 @@
 {
-  "users" : [
+  "users": [
     {
-      "id" : "user1",
-      "password" : "MTIzNA==",
-      "roles" : ["USER"],
-      "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMSIsImxhc3RuYW1lIjoiTW9oYW1lZCIsImlhdCI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiWW91c2ZpIiwiZW1haWwiOiJ5b3VzZmlAZ21haWwuY29tIiwicm9sZXMiOlsiVVNFUiJdfQ.-XGBhpERLVzkMT5ontglEHewgT5zbfY2Ma4lLMxVy3w"
+      "id": "user1",
+      "password": "MTIzNA==",
+      "roles": [
+        "USER"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMSIsImxhc3RuYW1lIjoiTW9oYW1lZCIsImlhdCI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiWW91c2ZpIiwiZW1haWwiOiJ5b3VzZmlAZ21haWwuY29tIiwicm9sZXMiOlsiVVNFUiJdfQ.-XGBhpERLVzkMT5ontglEHewgT5zbfY2Ma4lLMxVy3w"
     },
     {
-      "id" : "user2",
-      "password" : "MTIzNA==",
-      "roles" : ["USER"],
-      "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMiIsImxhc3RuYW1lIjoiSm9obiIsImlhdCI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiZG9lIiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsInJvbGVzIjpbIlVTRVIiXX0.vE9ObEXT_elXa7Rvcjmfc_uEZf5grvScsiAqoNqcaB8"
+      "id": "user2",
+      "password": "MTIzNA==",
+      "roles": [
+        "USER"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMiIsImxhc3RuYW1lIjoiSm9obiIsImlhdCI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiZG9lIiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsInJvbGVzIjpbIlVTRVIiXX0.vE9ObEXT_elXa7Rvcjmfc_uEZf5grvScsiAqoNqcaB8"
     },
     {
-      "id" : "admin",
-      "password" : "MTIzNA==",
-      "roles" : ["USER","ADMIN"],
-      "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImxhc3RuYW1lIjoiTW9oYW1lZCIsImlhdCI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiWW91c2ZpIiwiZW1haWwiOiJ5b3VzZmlAZ21haWwuY29tIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl19.agVM6Wn-U4khwfYjCYLsEvqmBzLfS65Rl9MVWFSpzIs"
+      "id": "admin",
+      "password": "MTIzNA==",
+      "roles": [
+        "USER",
+        "ADMIN"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImxhc3RuYW1lIjoiTW9oYW1lZCIsImlhdCI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiWW91c2ZpIiwiZW1haWwiOiJ5b3VzZmlAZ21haWwuY29tIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl19.agVM6Wn-U4khwfYjCYLsEvqmBzLfS65Rl9MVWFSpzIs"
     }
   ],
   "products": [
